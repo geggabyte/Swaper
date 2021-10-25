@@ -1,0 +1,5 @@
+D:\Soft\Swaper\Swaper.exe
+D:\Soft\Swaper\Swaper.dll
+D:\Soft\Swaper\Swaper.deps.json
+D:\Soft\Swaper\Swaper.runtimeconfig.json
+D:\Soft\Swaper\Swaper.pdb

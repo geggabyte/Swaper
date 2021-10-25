@@ -5,7 +5,6 @@ C:\Users\gegac\source\repos\Swaper\Swaper\bin\Debug\net5.0-windows\Swaper.runtim
 C:\Users\gegac\source\repos\Swaper\Swaper\bin\Debug\net5.0-windows\Swaper.dll
 C:\Users\gegac\source\repos\Swaper\Swaper\bin\Debug\net5.0-windows\ref\Swaper.dll
 C:\Users\gegac\source\repos\Swaper\Swaper\bin\Debug\net5.0-windows\Swaper.pdb
-C:\Users\gegac\source\repos\Swaper\Swaper\obj\Debug\net5.0-windows\Swaper.csproj.AssemblyReference.cache
 C:\Users\gegac\source\repos\Swaper\Swaper\obj\Debug\net5.0-windows\Swaper.Swaper.resources
 C:\Users\gegac\source\repos\Swaper\Swaper\obj\Debug\net5.0-windows\Swaper.csproj.GenerateResource.cache
 C:\Users\gegac\source\repos\Swaper\Swaper\obj\Debug\net5.0-windows\Swaper.GeneratedMSBuildEditorConfig.editorconfig
@@ -17,3 +16,5 @@ C:\Users\gegac\source\repos\Swaper\Swaper\obj\Debug\net5.0-windows\ref\Swaper.dl
 C:\Users\gegac\source\repos\Swaper\Swaper\obj\Debug\net5.0-windows\Swaper.pdb
 C:\Users\gegac\source\repos\Swaper\Swaper\obj\Debug\net5.0-windows\Swaper.genruntimeconfig.cache
 C:\Users\gegac\source\repos\Swaper\Swaper\obj\Debug\net5.0-windows\Swaper.AddGame.resources
+C:\Users\gegac\source\repos\Swaper\Swaper\obj\Debug\net5.0-windows\Swaper.CreateEmptyForm.resources
+C:\Users\gegac\source\repos\Swaper\Swaper\obj\Debug\net5.0-windows\Swaper.DeleteSaveForm.resources

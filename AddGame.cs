@@ -12,23 +12,40 @@ namespace Swaper
 {
     public partial class AddGame : Form
     {
-        Swaper sw;
+        Swaper swaper;
 
         public AddGame(Swaper a)
         {
             InitializeComponent();
-            sw = a;
+            swaper = a;
         }
 
         private void ChoseSaveFolder_Click(object sender, EventArgs e)
         {
             saveFolderDialog.ShowDialog();
+            NotSelectedText.Text = "";
         }
 
         private void Done_Click(object sender, EventArgs e)
         {
-            sw.AddNewGame(GameNameTextBox.Text, saveFolderDialog.SelectedPath);
+            swaper.AddNewGame(GameNameTextBox.Text, saveFolderDialog.SelectedPath, GetSaveFolderName(saveFolderDialog.SelectedPath));
             this.Close();
+        }
+
+        private string GetSaveFolderName(string path)
+        {
+            string result = "";
+            foreach(char a in path)
+            {
+                if (a == '\\')
+                {
+                    result = "";
+                    continue;
+                }
+                result += a;
+            }
+                
+            return result;
         }
     }
 }

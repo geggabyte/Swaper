@@ -30,14 +30,16 @@ namespace Swaper
             addGame.Show();
         }
 
-        public void AddNewGame(string gameName, string saveFolder)
+        public void AddNewGame(string gameName, string saveFolder, string saveFolderName)
         {
             GameListBox.Items.Add(gameName);
-            _FileSystem.AddGame(gameName, saveFolder);
+            _FileSystem.AddGame(gameName, saveFolder, saveFolderName);
         }
 
         private void removeToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (GameListBox.SelectedItem == null) return;
+
             _FileSystem.Remove(GameListBox.SelectedItem.ToString());
             GameListBox.Items.RemoveAt(GameListBox.SelectedIndex);
         }
@@ -55,6 +57,44 @@ namespace Swaper
             {
                 SaveListBox.Items.Add(a);
             }
+        }
+
+        private void Swaper_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void createEmptyToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            CreateEmptyForm cm = new CreateEmptyForm(this);
+            cm.Show();
+        }
+
+        public void CreateEmpty(string name)
+        {
+            _FileSystem.CreateEmpty(name, GameListBox.SelectedItem.ToString());
+        }
+
+        private void removeToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            DeleteSaveForm ds = new DeleteSaveForm(this, SaveListBox.SelectedItem.ToString());
+            ds.Show();
+        }
+
+        public void removeSave()
+        {
+            _FileSystem.RemoveSave(SaveListBox.SelectedItem.ToString(), GameListBox.SelectedItem.ToString());
+            SaveListBox.Items.RemoveAt(SaveListBox.SelectedIndex);
+        }
+
+        private void copyCurrentToSelectedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _FileSystem.CopyCurrentToSelected(GameListBox.SelectedItem.ToString(), SaveListBox.SelectedItem.ToString());
+        }
+
+        private void selectButton_Click(object sender, EventArgs e)
+        {
+            _FileSystem.SelectSave(GameListBox.SelectedItem.ToString(), SaveListBox.SelectedItem.ToString());
         }
     }
 }

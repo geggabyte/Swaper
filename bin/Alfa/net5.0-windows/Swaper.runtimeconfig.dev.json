@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\gegac\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\gegac\\.nuget\\packages"
+    ]
+  }
+}
