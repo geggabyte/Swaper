@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "HUc8uUb2FBFv+l9iojQvXZRUj/Rkwc3xqs8NUKx+Ee8lCbPduVznn8PY/SkKgNZCDylaoW9taZJMgSDEmazgQA==",
+  "dgSpecHash": "kZhtCgitkiDSJg0+N28oRbeewOjo0M/eQlmK/FrbdXMRIkT4QQyuMae6nK6jgUvNzXpn3C43Ws4f+02NIUfN7Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gegac\\source\\repos\\Swaper\\Swaper\\Swaper.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\projects\\Swaper\\Swaper.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gegac\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.13\\microsoft.netcore.app.host.win-x64.5.0.13.nupkg.sha512",
+    "C:\\Users\\gegac\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\gegac\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\gegac\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

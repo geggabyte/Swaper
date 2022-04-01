@@ -41,7 +41,7 @@ namespace Swaper
         public List<string> ShowSaves(string game)
         {
             List<string> result = new List<string>();
-            foreach(string a in Directory.GetDirectories("data\\" + game))
+            foreach (string a in Directory.GetDirectories("data\\" + game))
             {
                 result.Add(Path.GetFileName(a));
             }
@@ -50,8 +50,8 @@ namespace Swaper
 
         public void AddGame(string gameName, string savePath, string saveFolderName)
         {
-            if(Directory.Exists("data\\" + gameName)) return;
-            string cfgWay = "data\\" + gameName + "\\" + gameName +".cfg";
+            if (Directory.Exists("data\\" + gameName)) return;
+            string cfgWay = "data\\" + gameName + "\\" + gameName + ".cfg";
 
 
             GamesList.Add(gameName);
@@ -85,7 +85,7 @@ namespace Swaper
         public void Save()
         {
             StreamWriter sw = new StreamWriter(SwaperCfgWay);
-            foreach(string a in GamesList)
+            foreach (string a in GamesList)
             {
                 sw.WriteLine(a);
             }
@@ -108,6 +108,12 @@ namespace Swaper
         public void RemoveSave(string saveName, string gameName)
         {
             Directory.Delete("data\\" + gameName + "\\" + saveName, true);
+        }
+
+        public void RenameSave(string saveName, string gameName, string newSaveName)
+        {
+            string oldLoc = "data\\" + gameName + "\\" + saveName, newLoc = "data\\" + gameName + "\\" + newSaveName;
+            Directory.Move(oldLoc, newLoc);
         }
 
         public void SelectSave(string gameName, string saveName)
@@ -133,9 +139,17 @@ namespace Swaper
             sw.Close();
         }
 
+        public void SelectLastSave(string gameName, string saveName)
+        {
+            string cfgPath = "data\\" + gameName + "\\" + gameName + ".cfg";
+            List<string> fileContent = File.ReadLines(cfgPath).ToList();
+            fileContent[fileContent.Count - 1] = saveName;
+            File.WriteAllLines(cfgPath, fileContent);
+        }
+
         private void CopyDirectory(string sourcePath, string targetPath)
         {
-            foreach(string dirPath in Directory.GetDirectories(sourcePath, "*", SearchOption.AllDirectories))
+            foreach (string dirPath in Directory.GetDirectories(sourcePath, "*", SearchOption.AllDirectories))
             {
                 Directory.CreateDirectory(dirPath.Replace(sourcePath, targetPath));
             }

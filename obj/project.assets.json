@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gegac\\source\\repos\\Swaper\\Swaper\\Swaper.csproj",
+      "projectUniqueName": "D:\\projects\\Swaper\\Swaper.csproj",
       "projectName": "Swaper",
-      "projectPath": "C:\\Users\\gegac\\source\\repos\\Swaper\\Swaper\\Swaper.csproj",
+      "projectPath": "D:\\projects\\Swaper\\Swaper.csproj",
       "packagesPath": "C:\\Users\\gegac\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gegac\\source\\repos\\Swaper\\Swaper\\obj\\",
+      "outputPath": "D:\\projects\\Swaper\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\gegac\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -55,6 +55,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[5.0.13, 5.0.13]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
@@ -63,7 +81,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

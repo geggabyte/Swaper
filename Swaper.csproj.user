@@ -13,6 +13,9 @@
     <Compile Update="DeleteSaveForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="RenameSaveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Swaper.cs">
       <SubType>Form</SubType>
     </Compile>

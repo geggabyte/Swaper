@@ -18,7 +18,7 @@ namespace Swaper
         {
             InitializeComponent();
             _FileSystem = new FileSystem();
-            foreach(string a in _FileSystem.GamesList)
+            foreach (string a in _FileSystem.GamesList)
             {
                 GameListBox.Items.Add(a);
             }
@@ -51,14 +51,17 @@ namespace Swaper
 
         private void GameListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            updateSaveListBox();
+        }
+        private void updateSaveListBox()
+        {
             SaveListBox.Items.Clear();
             if (GameListBox.SelectedItem == null) return;
-            foreach(string a in _FileSystem.ShowSaves(GameListBox.SelectedItem.ToString()))
+            foreach (string a in _FileSystem.ShowSaves(GameListBox.SelectedItem.ToString()))
             {
                 SaveListBox.Items.Add(a);
             }
         }
-
         private void Swaper_Load(object sender, EventArgs e)
         {
 
@@ -96,5 +99,23 @@ namespace Swaper
         {
             _FileSystem.SelectSave(GameListBox.SelectedItem.ToString(), SaveListBox.SelectedItem.ToString());
         }
+
+        private void renameSaveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new RenameSaveForm(this, SaveListBox.SelectedItem.ToString()).Show();
+        }
+
+        public void renameSave(string newName)
+        {
+            _FileSystem.RenameSave(SaveListBox.SelectedItem.ToString(), GameListBox.SelectedItem.ToString(), newName);
+            updateSaveListBox();
+
+        }
+
+        private void selectLastSaveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _FileSystem.SelectLastSave(GameListBox.SelectedItem.ToString(), SaveListBox.SelectedItem.ToString());
+        }
+
     }
 }
